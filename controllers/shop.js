@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const PDFDocument = require("pdfkit"); // [PDFDocument] is a constructor, Note that you must install the package [functions-have-names] till the package [pdfkit] works
-const stripe = require('stripe')('sk_test_26PHem9AhJZvU623DfE1x4sd'); // This package for adding payment using Stripe, the parameter specifies the API_key of your account on the stripe website
+const stripe = require('stripe')(process.env.STRIPE_KEY); // This package for adding payment using Stripe, the parameter specifies the API_key of your account on the stripe website
 
 const Product = require('../models/product');
 const User = require('../models/user');
